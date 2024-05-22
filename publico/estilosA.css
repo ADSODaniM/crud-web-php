@@ -1,0 +1,184 @@
+/* Estilos generales para la página */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    background-color: #E6E6FA; /* Fondo de página lavanda suave */
+    color: #333; /* Color de texto predeterminado */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilos para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFE4E1; /* Fondo de tabla rosado claro */
+}
+
+/* Estilos para las celdas de la tabla */
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilos para los encabezados de la tabla */
+.table th {
+    background-color: #ec6aab; /* Fondo rosado claro más oscuro para encabezados */
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilos para filas impares de la tabla */
+.table tbody tr:nth-child(odd) {
+    background-color: #FFEBE8; /* Fondo ligeramente diferente para filas impares */
+}
+
+/* Estilos para enlaces dentro de las celdas de la tabla */
+.table td a {
+    text-decoration: none;
+    margin-right: 5px;
+    color: #555; /* Gris para los enlaces */
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+/* Estilos para enlaces al pasar el ratón */
+.table td a:hover {
+    color: #000; /* Negro para enlaces al pasar el ratón */
+}
+
+/* Estilos para filas de la tabla al pasar el ratón */
+.table tbody tr:hover {
+    background-color: #FFD1DC; /* Fondo rosado claro más oscuro al pasar el ratón */
+}
+
+/* Estilos para botones */
+button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff0080; /* Fondo rosado para botones */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para botones y enlaces al pasar el ratón */
+button:hover, a:hover {
+    background-color: #ec6aab; /* Fondo rosado .. */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ded8d8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 90%;
+    animation: modalFadeIn 0.5s forwards;
+}
+
+
+/* Estilos para el botón dentro del modal */
+.modal button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: #f8f3f3;
+    background-color: #e88bba; /* Color  para el botón */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Cambiar color del botón al hacer clic */
+.modal button:active {
+    background-color: #ff0080; /* Color rosado oscuro al hacer clic */
+}
+
+/* Cambiar color del botón al pasar el ratón */
+.modal button:hover {
+    background-color: #ff0080; /* Color rosado oscuro al pasar el ratón */
+}
+
+/* Estilos para el overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Estilos para el botón de cierre del modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Estilos para el botón de cierre al pasar el ratón */
+.close:hover {
+    color: #333;
+}
+
+/* Animación de aparición del modal */
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Agrega este bloque al final para cambiar el color del input de búsqueda cuando está enfocado */
+#inputBusqueda:focus {
+    border-color: #ff0080; /* Cambia el color del borde a rosado */
+    outline: none; /* Opcional: elimina el borde de enfoque predeterminado */
+}
+
+/* Cambiar el color del borde del input dentro del modal cuando está enfocado */
+.modal input[type="text"]:focus {
+    border-color: #ff0080; /* Cambia el color del borde a rosado */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+/* Cambiar el color del borde de todos los inputs dentro del modal cuando están enfocados */
+.modal input[type="text"]:focus,
+.modal input[type="date"]:focus,
+.modal input[type="time"]:focus,
+.modal select:focus {
+    border-color: #ff0080; /* Cambia el color del borde a rosado */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+}
